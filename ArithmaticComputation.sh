@@ -43,6 +43,27 @@ for(( i=0;i<count; i++ ))
 
     done
 
+# Array DescOrder
+
+size=${#ComputArray[@]};
+
+  for (( i=0;i<$size;i++ ))
+    do
+       for (( j=0;j<$size-1-$i;j++ ))
+          do
+              if [[ ${ComputArray[j]} -lt ${ComputArray[j+1]} ]]
+                  then
+                                   temp=${ComputArray[j]};
+                                   ComputArray[$j]=${ComputArray[$((j+1))]};
+                                   ComputArray[$((j+1))]=$temp;
+               fi
+           done
+     done
 
 
-echo "Values of dictionary in the array: " ${ComputArray[@]}
+
+
+
+
+
+
