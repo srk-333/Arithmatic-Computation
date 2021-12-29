@@ -6,3 +6,4 @@ read -p "Enter Third  number " c;
 
 firstComput=$(( a + b * c ));
 SecondComput=$(( a * b + c ));
+ThirdComputation=$(( c + a / b ));
