@@ -60,6 +60,20 @@ size=${#ComputArray[@]};
            done
      done
 
+# Array in ascending order
+
+for (( i=0;i<$size;i++ ))
+    do
+       for (( j=0;j<$size-1-$i;j++ ))
+          do
+              if [[ ${ComputArray[j]} -gt ${ComputArray[j+1]} ]]
+                  then
+                                   temp=${ComputArray[j]};
+                                   ComputArray[$j]=${ComputArray[$((j+1))]};
+                                   ComputArray[$((j+1))]=$temp;
+               fi
+           done
+     done
 
 
 
