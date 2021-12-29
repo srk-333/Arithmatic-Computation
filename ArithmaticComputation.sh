@@ -15,3 +15,34 @@ CompuDict[A]=$firstComput;
 CompuDict[B]=$secondComput;
 CompuDict[C]=$thirdComput;
 CompuDict[D]=$fourthComput;
+
+declare -a ComputArray;
+
+VALUES=()
+
+count=0
+
+
+ for DATA in "${CompuDict[@]}";
+
+   do
+       
+         VALUES+=("${DATA##*:}")
+	
+             ((count++))
+
+   done
+
+
+ 
+for(( i=0;i<count; i++ ))
+
+     do
+	
+         ComputArray[i]=${VALUES[i]}
+
+    done
+
+
+
+echo "Values of dictionary in the array: " ${ComputArray[@]}
