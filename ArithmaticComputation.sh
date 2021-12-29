@@ -5,4 +5,4 @@ read -p "Enter Second number " b;
 read -p "Enter Third  number " c;
 
 firstComput=$(( a + b * c ));
-echo $firstComput;
+SecondComput=$(( a * b + c ));
